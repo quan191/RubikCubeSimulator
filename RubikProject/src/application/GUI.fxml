@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#keyAction" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GUIController">
+   <children>
+      <AnchorPane fx:id="anchorPane" focusTraversable="true" layoutX="29.0" layoutY="51.0" prefHeight="317.0" prefWidth="361.0" />
+      <Button focusTraversable="false" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backAction" text="Back" />
+      <Button focusTraversable="false" layoutX="453.0" layoutY="86.0" mnemonicParsing="false" onAction="#rotateAction" prefHeight="25.0" prefWidth="80.0" text="U" />
+      <TextField fx:id="timeTextField" editable="false" focusTraversable="false" layoutX="486.0" layoutY="34.0" prefHeight="35.0" prefWidth="104.0" text="Time" />
+      <Button focusTraversable="false" layoutX="453.0" layoutY="111.0" mnemonicParsing="false" onAction="#rotateAction" prefHeight="25.0" prefWidth="80.0" text="Ui" />
+      <Button focusTraversable="false" layoutX="398.0" layoutY="150.0" mnemonicParsing="false" onAction="#rotateAction" prefHeight="80.0" prefWidth="27.0" text="L" textAlignment="CENTER" />
+      <Button focusTraversable="false" layoutX="425.0" layoutY="150.0" mnemonicParsing="false" onAction="#rotateAction" prefHeight="80.0" prefWidth="27.0" text="Li" wrapText="true" />
+      <Button focusTraversable="false" layoutX="532.0" layoutY="150.0" mnemonicParsing="false" onAction="#rotateAction" prefHeight="80.0" prefWidth="27.0" text="Ri" wrapText="true" />
+      <Button focusTraversable="false" layoutX="558.0" layoutY="150.0" mnemonicParsing="false" onAction="#rotateAction" prefHeight="80.0" prefWidth="27.0" text="R" />
+      <Button focusTraversable="false" layoutX="453.0" layoutY="239.0" mnemonicParsing="false" onAction="#rotateAction" prefHeight="25.0" prefWidth="80.0" text="Di" />
+      <Button focusTraversable="false" layoutX="453.0" layoutY="264.0" mnemonicParsing="false" onAction="#rotateAction" prefHeight="25.0" prefWidth="80.0" text="D" />
+      <Button focusTraversable="false" layoutX="399.0" layoutY="362.0" mnemonicParsing="false" onAction="#scrambleAction" prefHeight="31.0" prefWidth="80.0" text="Scamble" />
+      <Button focusTraversable="false" layoutX="533.0" layoutY="362.0" mnemonicParsing="false" onAction="#solverAction" text="Solve" />
+      <TextField fx:id="stepTextField" editable="false" focusTraversable="false" layoutX="396.0" layoutY="34.0" prefHeight="35.0" prefWidth="73.0" text="Step" />
+      <Button focusTraversable="false" layoutX="459.0" layoutY="309.0" mnemonicParsing="false" onAction="#playAction" prefHeight="41.0" prefWidth="67.0" text="Play" />
+      <Button focusTraversable="false" layoutX="473.0" layoutY="154.0" mnemonicParsing="false" onAction="#rotateAction" prefHeight="31.0" prefWidth="40.0" text="F" />
+      <Button focusTraversable="false" layoutX="473.0" layoutY="195.0" mnemonicParsing="false" onAction="#rotateAction" prefHeight="31.0" prefWidth="40.0" text="Fi" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MenuController">
+   <children>
+      <ImageView fx:id="Image3x3" fitHeight="373.0" fitWidth="281.0" layoutX="306.0" layoutY="15.0" onMouseClicked="#Init3x3" onMouseEntered="#Enlarge3x3" onMouseExited="#Shrink3x3">
+         <image>
+            <Image url="@Rubik3x3.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Image2x2" fitHeight="373.0" fitWidth="281.0" layoutX="13.0" layoutY="15.0" onMouseClicked="#Init2x2" onMouseEntered="#Enlarge2x2" onMouseExited="#Shrink2x2">
+         <image>
+            <Image url="@Rubik2x2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="400.0" fitWidth="43.0" layoutX="279.0" layoutY="0.0" pickOnBounds="true" preserveRatio="false">
+         <image>
+            <Image url="@Tauhai.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
