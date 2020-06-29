@@ -8,7 +8,7 @@ Mô phỏng rubik 2x2 và 3x3
 
 * **Nguyễn Vũ Long** - [Link github](https://github.com/LongNguyenVu181)
 
-* **Lê Đức Mạnh **  -   [Link github]()
+* **Lê Đức Mạnh**  -   [Link github]()
 
 ## Đề bài 
 
