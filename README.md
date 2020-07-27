@@ -1,6 +1,6 @@
 # RubikCubeSimulator
 
-Mô phỏng rubik 2x2 và 3x3 
+This project describes the behavior of rubik cube 2x2 and rubik cube 3x3.
 
 ## Authors
 
@@ -10,25 +10,23 @@ Mô phỏng rubik 2x2 và 3x3
 
 * **Lê Đức Mạnh**  -   [Link github]()
 
-## Đề bài 
+## Title 
 
-Mô phỏng rubik 2x2 và rubik 3x3 , ứng dụng lập trình ngôn ngữ hướng đối tượng bằng java , và tạo đồ họa bằng javafx .
+Describes the behavior of rubik cube . 
 
-## Phần mềm sử dụng  
+## Software used
 
-* Java
-* Javafx
+* Java 8
+* Javafx 
 * Javafx Scene Builder
 
-## Cách download 
+## How to download 
 ` git clone https://github.com/quan191/RubikCubeSimulator.git`
 
-## Hình ảnh minh họa 
+## illustration image
 
 ![Image of RubikCube3x3](https://github.com/quan191/RubikCubeSimulator/blob/master/RubikCubeSimulator.png?raw=true)
 
 ## Special Thanks 
 
-* **Blog của JPereda** -[Link](http://jperedadnr.blogspot.com/2014/04/rubikfx-solving-rubiks-cube-with-javafx.html)
-* **Github của JPereda**
-
+* **JPereda's Blog** -[Link](http://jperedadnr.blogspot.com/2014/04/rubikfx-solving-rubiks-cube-with-javafx.html)
