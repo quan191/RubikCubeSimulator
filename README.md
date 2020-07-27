@@ -14,7 +14,7 @@ This project describes the behavior of rubik cube 2x2 and rubik cube 3x3.
 
 Describes the behavior of rubik cube . 
 
-## Software used
+## Used sofware
 
 * Java 8
 * Javafx 
