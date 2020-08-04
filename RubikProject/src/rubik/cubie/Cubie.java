@@ -1,7 +1,7 @@
 package rubik.cubie;
 
 import javafx.scene.shape.TriangleMesh;
-import rubik.RubikColors;
+import rubik.cubie.setup.ColorsSetUp;
 
 public class Cubie extends TriangleMesh {
 	
@@ -29,13 +29,13 @@ public class Cubie extends TriangleMesh {
 
         // TEXTURES
         this.getTexCoords().addAll(
-            RubikColors.X_RED, 0.5f, 			// 0
-            RubikColors.X_GREEN, 0.5f,			// 1
-            RubikColors.X_BLUE, 0.5f, 			// 2
-            RubikColors.X_YELLOW, 0.5f, 		// 3
-            RubikColors.X_ORANGE, 0.5f, 		// 4 
-            RubikColors.X_WHITE, 0.5f,			// 5
-            RubikColors.X_GRAY, 0.5f,			// 6
+            ColorsSetUp.X_RED, 0.5f, 			// 0
+            ColorsSetUp.X_GREEN, 0.5f,			// 1
+            ColorsSetUp.X_BLUE, 0.5f, 			// 2
+            ColorsSetUp.X_YELLOW, 0.5f, 		// 3
+            ColorsSetUp.X_ORANGE, 0.5f, 		// 4 
+            ColorsSetUp.X_WHITE, 0.5f,			// 5
+            ColorsSetUp.X_GRAY, 0.5f,			// 6
             5f/7f,0f,
             6f/7f,0f,
             5f/7f,1f,
@@ -43,7 +43,7 @@ public class Cubie extends TriangleMesh {
         );
 
         for(int i=0;i<12;i+=2) {
-        	if (face[i/2]!=RubikColors.WHITE) {
+        	if (face[i/2]!=ColorsSetUp.WHITE) {
         		this.getFaces().addAll(points[i][0],face[i/2],points[i][1],face[i/2],points[i][2],face[i/2]);
         		this.getFaces().addAll(points[i+1][0],face[i/2],points[i+1][1],face[i/2],points[i+1][2],face[i/2]);
         	}

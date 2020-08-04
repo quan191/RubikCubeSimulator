@@ -28,7 +28,7 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 import rubik.scene.RubikScene;
 
-public class GUIController implements Initializable {
+public class RubikScreenController implements Initializable {
 
 	@FXML
 	private AnchorPane anchorPane;

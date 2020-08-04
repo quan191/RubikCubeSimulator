@@ -1,4 +1,4 @@
-package rubik.cubie.index;
+package rubik.cubie.rotate;
 
 public class CubieIndexes2x2 extends CubieIndexes {
 
