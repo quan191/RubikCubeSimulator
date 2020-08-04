@@ -24,9 +24,9 @@ import rubik.scene.RubikScene;
 import rubik.scene.RubikScene2x2;
 import rubik.scene.RubikScene3x3;
 
-public class MenuController implements Initializable {
+public class StartScreenController implements Initializable {
 
-	private GUIController guiController;
+	private RubikScreenController guiController;
 
 	@FXML
 	private AnchorPane anchorPane;
@@ -55,7 +55,7 @@ public class MenuController implements Initializable {
 	private void initRubik(RubikScene rubikScene, String title) {
 		try {
 			FXMLLoader fxmlLoader = new FXMLLoader();
-			fxmlLoader.setLocation(getClass().getResource("GUI.fxml"));
+			fxmlLoader.setLocation(getClass().getResource("RubikScreen.fxml"));
 			Scene scene = new Scene(fxmlLoader.load());
 			Stage stage = new Stage();
 			stage.setTitle(title);

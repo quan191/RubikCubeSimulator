@@ -1,4 +1,4 @@
-package rubik.cubie;
+package rubik.cubie.rotate;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,8 +12,9 @@ import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.geometry.Point3D;
 import javafx.util.Duration;
+import rubik.cubie.CubieView;
 
-public class CubieViewGroup {
+public class GroupAndRotate {
 	
 	private List<CubieView> cubieView = new ArrayList<CubieView>();
 	
@@ -26,15 +27,15 @@ public class CubieViewGroup {
 		this.cubieView.clear();
 	}
 
-	public CubieViewGroup() {
+	public GroupAndRotate() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public void rotate(Point3D axis, double angle, double animationTime, BooleanProperty onRotation) {
+	public void rotateAnimation(Point3D axis, double angle, double animationTime, BooleanProperty onRotation) {
 		ChangeListener<Number> rotMap;
 		rotMap = (ov, angOld, angNew) -> {
 			for(int i = 0;i<this.cubieView.size();i++) {
-				this.cubieView.get(i).rotate(angOld.doubleValue(), angNew.doubleValue(), axis);
+				this.cubieView.get(i).matrixTransform(angOld.doubleValue(), angNew.doubleValue(), axis);
 			}
 		};
 		

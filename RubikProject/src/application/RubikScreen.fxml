@@ -5,7 +5,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#keyAction" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GUIController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#keyAction" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RubikScreenController">
    <children>
       <AnchorPane fx:id="anchorPane" focusTraversable="true" layoutX="29.0" layoutY="51.0" prefHeight="317.0" prefWidth="361.0" />
       <Button focusTraversable="false" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backAction" text="Back" />

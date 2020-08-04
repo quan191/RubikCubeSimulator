@@ -16,10 +16,9 @@ public class CubieView extends MeshView{
 		this.getTransforms().addAll(new Translate(point.getX(), point.getY(), point.getZ()));
 	}
 	
-	public void rotate(double oldAngle, double newAngle, Point3D axis) {
+	public void matrixTransform(double oldAngle, double newAngle, Point3D axis) {
 		Affine a = new Affine(this.getTransforms().get(0));
 		a.prepend(new Rotate(newAngle - oldAngle,axis));
-		System.out.println(a);
 		this.getTransforms().setAll(a);
 		
 	}

@@ -20,9 +20,9 @@ import javafx.scene.paint.PhongMaterial;
 import javafx.scene.transform.Rotate;
 import rubik.cubie.Cubie;
 import rubik.cubie.CubieView;
-import rubik.cubie.CubieViewGroup;
-import rubik.cubie.index.CubieIndexes;
-import rubik.cubie.properties.CubieProperties;
+import rubik.cubie.rotate.CubieIndexes;
+import rubik.cubie.rotate.GroupAndRotate;
+import rubik.cubie.setup.SetUp;
 import rubik.state.RubikState;
 
 public abstract class RubikScene extends SubScene {
@@ -31,13 +31,13 @@ public abstract class RubikScene extends SubScene {
 
 	protected RubikState rubikState;
 
-	protected CubieViewGroup rubikLayer = new CubieViewGroup();
+	protected GroupAndRotate rubikLayer = new GroupAndRotate();
 
 	public RubikState getRubikState() {
 		return rubikState;
 	}
 
-	protected CubieIndexes rot;
+	protected CubieIndexes cubieIndexes;
 
 	protected final BooleanProperty onRotation = new SimpleBooleanProperty(false);
 	protected final BooleanProperty onScramble = new SimpleBooleanProperty(false);
@@ -50,7 +50,7 @@ public abstract class RubikScene extends SubScene {
 		return onScramble;
 	}
 
-	protected CubieProperties guiRubik;
+	protected SetUp guiRubik;
 
 	public RubikScene(Group subSceneRoot, double height, double width) {
 		super(subSceneRoot, height, width, true, SceneAntialiasing.BALANCED);
@@ -66,19 +66,14 @@ public abstract class RubikScene extends SubScene {
 
 		this.setCamera(camera);
 
-		PhongMaterial mat = new PhongMaterial();
-		
-		Image temp = new Image(getClass().getResourceAsStream("2.png"));
-		mat.setDiffuseMap(temp);
+		Group meshGroup=guiRubik.makeRubik(mapMeshes);
 
-		Group meshGroup = new Group();
-
-		for (int i = 0; i < guiRubik.getPatternFaceF().size(); i++) {
+		/*for (int i = 0; i < guiRubik.getPatternFaceF().size(); i++) {
 			CubieView meshP = new CubieView(guiRubik.getPointsFaceF().get(i),
 					new Cubie(guiRubik.getPatternFaceF().get(i)), mat);
 			mapMeshes.put(i + 1, meshP);
 			meshGroup.getChildren().add(meshP);
-		}
+		}*/
 
 		Rotate rotateX = new Rotate(30, 0, 0, 0, Rotate.X_AXIS);
 		Rotate rotateY = new Rotate(20, 0, 0, 0, Rotate.Y_AXIS);
@@ -136,13 +131,13 @@ public abstract class RubikScene extends SubScene {
 
 		setUpLayer(btRot);
 		
-		rubikLayer.rotate(getAxis(btRot), angEnd, animationTime, onRotation);
+		rubikLayer.rotateAnimation(getAxis(btRot), angEnd, animationTime, onRotation);
 	}
 
 	protected void setUpLayer(String btRot) {
 		rubikLayer.clearCubieView();
 
-		List<Integer> layer = rot.getWhatToTurn(btRot);
+		List<Integer> layer = cubieIndexes.getWhatToTurn(btRot);
 		mapMeshes.forEach((k, v) -> {
 			layer.stream().filter(l -> k == l).findFirst().ifPresent(l -> {
 				rubikLayer.addCubieView(v);

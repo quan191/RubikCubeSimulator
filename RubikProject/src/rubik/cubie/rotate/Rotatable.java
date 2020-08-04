@@ -1,4 +1,4 @@
-package rubik.cubie.index;
+package rubik.cubie.rotate;
 
 import java.util.List;
 
